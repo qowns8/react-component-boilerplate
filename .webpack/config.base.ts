@@ -1,9 +1,9 @@
-const { distPath, entry } = require('./config.path')
+const paths = require('./config.path.ts')
 const configurationBase = {
-  entry: entry,
+  entry: paths.entry,
   output: {
     filename: 'index.js',
-    path: distPath,
+    path: paths.distPath,
     libraryTarget: 'commonjs'
   },
   resolve: {

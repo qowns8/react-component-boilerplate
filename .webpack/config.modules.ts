@@ -9,15 +9,8 @@ const configurationProd = {
     rules: [
       {
         test: /\.s?(a|c)ss$/,
-        use: [
-          'sass-loader',
-        ],
-        include: /\.module\.s?(c|a)ss$/,
-      },
-      {
-        test: /\.s?(a|c)ss$/,
-        use: ['css-loader', 'sass-loader'],
-        exclude: /\.module\.s?(c|a)ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        exclude: [/node_modules/, /example/],
       },
       {
         test: /\.(ts|tsx)?$/,
@@ -28,7 +21,6 @@ const configurationProd = {
       }
     ],
   },
-
   optimization: {
     minimize: true,
     minimizer: [

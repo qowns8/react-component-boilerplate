@@ -1,16 +1,15 @@
 {
-  "name": "custom-component",
+  "name": "react-component-boilerplate",
   "version": "1.0.0",
-  "description": "custom-component",
+  "description": "react-component-boilerplate",
   "private": false,
   "keywords": [
-    "custom-table",
-    "custom-table"
+    "custom-component-boilerplate"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "webpack --config ./.webpack/config.prod.ts",
+    "build": "webpack --config .webpack/config.modules.ts",
     "test": "jest --watchAll false",
     "test:coverage": "jest --json --coverage"
   },
