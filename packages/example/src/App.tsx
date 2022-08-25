@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Custom from 'custom-component'
+import Custom from '@react-component-boilerplate/component'
 
 function App() {
   return (

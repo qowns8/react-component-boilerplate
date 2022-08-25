@@ -1,7 +1,13 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "baseUrl": "./",
+    "outDir": "./dist",
     "allowJs": false,
     "module": "esnext",
     "target": "es5",
@@ -11,6 +17,7 @@
       "dom"
     ]
   },
+  "include": ["src/**/*"],
   "exclude": [
     "dist",
     "node_modules",

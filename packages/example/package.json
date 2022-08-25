@@ -1,8 +1,9 @@
 {
-  "name": "example",
+  "name": "@react-component-boilerplate/example",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-component-boilerplate/component": "workspace:*",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,12 +11,11 @@
     "@types/node": "^16.11.47",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "react": "link:../node_modules/react",
-    "react-dom": "link:../node_modules/react-dom",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4",
-    "custom-component": "link:.."
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

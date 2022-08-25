@@ -2,5 +2,11 @@ dist
 coverage
 node_modules
 .idea
-/yarn.lock
-/yarn-error.log
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

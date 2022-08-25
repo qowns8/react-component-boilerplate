@@ -1,0 +1,58 @@
+name: Running Code Coverage
+# if you do not setting codecov and secrets key it will be failure
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  codecov:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: ['16']
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Yarn Cache
+        id: yarn-cache-dir-path-v2
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Node Modules Cache
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path-v2.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: node_modules (yarn, codecov)
+        run: |
+          npm install yarn -g
+          npm install codecov -g
+
+      - name: dependency
+      - run: yarn workspace @react-component-boilerplate/component install
+
+      - name: coverage
+      - run: yarn test:component:coverage
+
+      - name: Codecov upload
+        uses: codecov/codecov-action@v2
+        with:
+          fail_ci_if_error: false
+          token: ${{ secrets.CODECOV_TOKEN }}
