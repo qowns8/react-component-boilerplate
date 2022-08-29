@@ -1,0 +1,11 @@
+.lehkost-table-header {
+  display: flex;
+  border: 1px solid gray;
+}
+
+.lehkost-table-header--cell-title {
+  display: flex;
+  column-gap: 5px;
+  border-right: 1px solid gray;
+}
+
