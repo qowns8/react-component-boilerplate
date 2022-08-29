@@ -9,8 +9,8 @@ function App() {
         <Custom
           headers={[
             {
-              key: 'hello0',
-              title: 'world0',
+              key: 'name',
+              title: '이름',
               menu: [
                 {
                   value: '메뉴입니다.',
@@ -21,8 +21,8 @@ function App() {
               ],
             },
             {
-              key: 'hello0',
-              title: 'world1',
+              key: 'age',
+              title: '나이',
             },
             {
               key: 'hello0',
@@ -76,12 +76,12 @@ function App() {
           ]}
           data={[
             {
-              name: 'sss',
-              age: 22,
+              name: 'john',
+              age: 34,
             },
             {
-              name: 'sdw',
-              age: 2231,
+              name: 'jason',
+              age: 40,
             },
           ]}
         />

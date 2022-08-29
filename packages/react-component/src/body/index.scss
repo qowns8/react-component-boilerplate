@@ -1,12 +1,14 @@
-.lehkost-table-header {
+.lehkost-table-body--tr {
+
   display: flex;
   border: 1px solid gray;
 }
 
-.lehkost-table-header--cell-title {
+.lehkost-table-body--td {
   display: flex;
   column-gap: 5px;
   border-right: 1px solid gray;
   width: 100px;
+  height: 40px;
 }
 

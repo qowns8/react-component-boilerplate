@@ -1,11 +1,22 @@
 import React from "react";
-import {ITableBodys} from "../types";
+import { ITableBodyProps } from '../types'
+import './index.scss'
 
-export default function TableBody({ data }: ITableBodys) {
+export default function TableBody({ data, headerProps }: ITableBodyProps) {
   return  <div className="lehkost-table-body">
+
     {
       data.map(item => <div className="lehkost-table-body--tr">
-        {item.value}
+        {
+          headerProps.map(header => {
+            const {key} = header
+
+            console.log('item', item, key)
+            return <div  className="lehkost-table-body--td">
+              {item[key]}
+            </div>
+          })
+        }
       </div>)
     }
   </div>

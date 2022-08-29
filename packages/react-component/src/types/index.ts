@@ -27,10 +27,7 @@ export interface ITableHead<TableItem = any> {
   }[]
 }
 
-export interface ITableBodys<TableItem = any> {
-  data: ITableBody<TableItem>[]
-}
-export interface ITableBody<TableItem = any> {
-  key: string
-  value: string
+export interface ITableBodyProps<TableItem = any> {
+  headerProps: ITableHeaders
+  data: TableItem[]
 }
