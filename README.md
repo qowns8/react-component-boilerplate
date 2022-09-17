@@ -17,6 +17,10 @@ if you use yarn-barry you can use zero-install and pnp
 
 [how to install yarn](https://yarnpkg.com/getting-started/install)
 
+```shell
+#
+npm install -g yarn
+```
 ## build
 
 ```shell
@@ -33,6 +37,7 @@ monorepo
 /.husky            # husky working before commit and push for lint, jest
 /.yarn             # if you use yarn-berry
 /packages          # monorepo   
+    /docs              # storybook repo
     /exmaple           # smaple react site repo
       /src
       /package.json 
@@ -78,4 +83,9 @@ yarn test:e2e
 when we develop software CI is most important thing
 this template use git-action
 if you do not want ci removed `./github/workflows`
+
+## storybook
+`/packages/docs`
+
+
 

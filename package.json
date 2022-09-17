@@ -2,6 +2,7 @@
   "name": "react-component-boilerplate:monorepo",
   "version": "1.0.0",
   "description": "react-component-boilerplate monorepo",
+  "packageManager": "yarn@3.2.3",
   "private": true,
   "scripts": {
     "component": "yarn workspace @react-component-boilerplate/component",
