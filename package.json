@@ -75,23 +75,5 @@
       "pre-commit": "lint-staged",
       "pre-push": "yarn lint && yarn test"
     }
-  },
-  "jest": {
-    "rootDir": "./src",
-    "collectCoverageFrom": [
-      "/**/*.{js,jsx,ts,tsx}"
-    ],
-    "coverageReporters": [
-      "json",
-      "text"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 10,
-        "functions": 10,
-        "lines": 10,
-        "statements": 10
-      }
-    }
   }
 }

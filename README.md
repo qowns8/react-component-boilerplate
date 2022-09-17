@@ -9,8 +9,11 @@ so i'm composed react-component development template
 
 # develop setting
 
-## recommend yarn for zero-install
+## recommend yarn berry
 this boilerplate developed on yarn berry
+
+project not use pnp but use package cache
+i will have plan nodeLiker to pnp (not yet)
 
 always node_modules bigger any other lang package
 if you use yarn-barry you can use zero-install and pnp
