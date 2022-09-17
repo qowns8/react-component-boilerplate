@@ -27,26 +27,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Yarn Cache
-        id: yarn-cache-dir-path-v2
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Node Modules Cache
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path-v2.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: node_modules (yarn, codecov)
-        run: |
-          npm install yarn -g
-          npm install codecov -g
-
       - name: dependency
-      - run: yarn workspace @react-component-boilerplate/component install
+      - run: |
+          yarn set version berry
+          yarn workspace @react-component-boilerplate/component install
 
       - name: coverage
       - run: yarn test:component:coverage
