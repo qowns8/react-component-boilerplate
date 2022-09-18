@@ -6,11 +6,11 @@
   "private": true,
   "scripts": {
     "component": "yarn workspace @react-component-boilerplate/component",
-    "build:component": "yarn workspace @react-component-boilerplate/component build",
-    "test:component": "yarn workspace @react-component-boilerplate/component test",
-    "test:component|coverage": "yarn workspace @react-compoent-boilerplate/component test:coverage",
-    "run:example": "yarn workspace @react-component-boilerplate/example start",
-    "test:e2e": "yarn workspace @react-compoent-boilerplate/component test:coverage",
+    "component:build": "yarn workspace @react-component-boilerplate/component build",
+    "component:test": "yarn workspace @react-component-boilerplate/component test",
+    "component:coverage": "yarn workspace @react-compoent-boilerplate/component test:coverage",
+    "example:run": "yarn workspace @react-component-boilerplate/example start",
+    "e2e:test": "yarn workspace @react-compoent-boilerplate/component test:coverage",
     "lint": "eslint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
