@@ -14,7 +14,8 @@
     "lint": "eslint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": " husky install ./.husky"
+    "prepare": " husky install ./.husky",
+    "component:format": "eslint ./packages/react-component/src --fix && prettier ./packages/react-component/src --write"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -62,7 +63,7 @@
     "typescript": "^4.7.4"
   },
   "lint-staged": {
-    "packages/*/src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "./packages/react-component/src/**/*.{js,jsx,ts,tsx,json,md}": [
       "echo lint-staged",
       "eslint --fix",
       "prettier --write"

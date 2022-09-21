@@ -1,5 +1,4 @@
 import { ITableHead, ITableHeaders } from '../types'
-import { useState } from 'react'
 import './index.scss'
 import React from 'react'
 

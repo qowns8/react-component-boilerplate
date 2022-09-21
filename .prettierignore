@@ -1,3 +1,6 @@
+dist
+node_modules
+rollup.config.js
 #exmaple
 #dist
 #.webpack

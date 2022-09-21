@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 export interface ITableProps<TableItem = any> {
   width?: 'auto' | number
@@ -20,7 +20,7 @@ export interface ITableHead<TableItem = any> {
   sortRule?: {
     display: string
     compare: ICompare<TableItem>
-  }[],
+  }[]
   menu?: {
     value: React.ReactNode
     onClick: () => void
