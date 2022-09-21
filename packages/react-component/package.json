@@ -73,6 +73,7 @@
     ]
   },
   "jest": {
+    "testEnvironment": "jsdom",
     "rootDir": "./src",
     "collectCoverageFrom": [
       "/**/*.{js,jsx,ts,tsx}"
