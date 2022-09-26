@@ -10,7 +10,6 @@ export default function TableBody({ data, headerProps }: ITableBodyProps) {
           {headerProps.map(header => {
             const { key } = header
 
-            console.log('item', item, key)
             return <div className="lehkost-table-body--td">{item[key]}</div>
           })}
         </div>
